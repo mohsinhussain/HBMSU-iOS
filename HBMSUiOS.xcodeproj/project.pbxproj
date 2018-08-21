@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E32AE1A764907897528EAC3 /* Pods_HBMSUiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDF912531C32E2E898BCCC7 /* Pods_HBMSUiOS.framework */; };
+		6A79E1FF77F5817CDB4F6635 /* Pods_HBMSUiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC056B5990A8269FBB9CAB28 /* Pods_HBMSUiOSUITests.framework */; };
+		73361D3CB25AD4CB6DF58959 /* Pods_HBMSUiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A45C7E3B0D1C44A641A7AD /* Pods_HBMSUiOSTests.framework */; };
 		B1048995212B910D00FC8F27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1048994212B910D00FC8F27 /* AppDelegate.swift */; };
-		B1048997212B910D00FC8F27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1048996212B910D00FC8F27 /* ViewController.swift */; };
+		B1048997212B910D00FC8F27 /* WeatherListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1048996212B910D00FC8F27 /* WeatherListingViewController.swift */; };
 		B104899A212B910D00FC8F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1048998212B910D00FC8F27 /* Main.storyboard */; };
 		B104899D212B910D00FC8F27 /* HBMSUiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B104899B212B910D00FC8F27 /* HBMSUiOS.xcdatamodeld */; };
 		B104899F212B910E00FC8F27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B104899E212B910E00FC8F27 /* Assets.xcassets */; };
 		B10489A2212B910E00FC8F27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B10489A0212B910E00FC8F27 /* LaunchScreen.storyboard */; };
 		B10489AD212B910E00FC8F27 /* HBMSUiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10489AC212B910E00FC8F27 /* HBMSUiOSTests.swift */; };
 		B10489B8212B910E00FC8F27 /* HBMSUiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10489B7212B910E00FC8F27 /* HBMSUiOSUITests.swift */; };
+		B1A0CF9A212CAA7400FF607F /* ForeCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CF99212CAA7400FF607F /* ForeCast.swift */; };
+		B1A0CF9C212CAE7000FF607F /* ViewControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CF9B212CAE7000FF607F /* ViewControllerTableViewCell.swift */; };
+		B1A0CF9E212CBA1B00FF607F /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CF9D212CBA1B00FF607F /* Main.swift */; };
+		B1A0CFA0212CBB0E00FF607F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CF9F212CBB0E00FF607F /* Weather.swift */; };
+		B1A0CFA2212CBBA800FF607F /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CFA1212CBBA800FF607F /* Clouds.swift */; };
+		B1A0CFA4212CBC9500FF607F /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CFA3212CBC9500FF607F /* Wind.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +44,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1400279EB50597C2FDCEFC27 /* Pods-HBMSUiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBMSUiOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBMSUiOSTests/Pods-HBMSUiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4EC01D30D98585E85C3D3854 /* Pods-HBMSUiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBMSUiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HBMSUiOSTests/Pods-HBMSUiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		6AE3933A37A63F397BE5C5FB /* Pods-HBMSUiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBMSUiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-HBMSUiOS/Pods-HBMSUiOS.release.xcconfig"; sourceTree = "<group>"; };
+		AC056B5990A8269FBB9CAB28 /* Pods_HBMSUiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HBMSUiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4907AF1A54E159F2400C67 /* Pods-HBMSUiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBMSUiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBMSUiOSUITests/Pods-HBMSUiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1048991212B910C00FC8F27 /* HBMSUiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBMSUiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1048994212B910D00FC8F27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B1048996212B910D00FC8F27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B1048996212B910D00FC8F27 /* WeatherListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherListingViewController.swift; sourceTree = "<group>"; };
 		B1048999212B910D00FC8F27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B104899C212B910D00FC8F27 /* HBMSUiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HBMSUiOS.xcdatamodel; sourceTree = "<group>"; };
 		B104899E212B910E00FC8F27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +63,16 @@
 		B10489B3212B910E00FC8F27 /* HBMSUiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HBMSUiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B10489B7212B910E00FC8F27 /* HBMSUiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HBMSUiOSUITests.swift; sourceTree = "<group>"; };
 		B10489B9212B910E00FC8F27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1A0CF99212CAA7400FF607F /* ForeCast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeCast.swift; sourceTree = "<group>"; };
+		B1A0CF9B212CAE7000FF607F /* ViewControllerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewCell.swift; sourceTree = "<group>"; };
+		B1A0CF9D212CBA1B00FF607F /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		B1A0CF9F212CBB0E00FF607F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		B1A0CFA1212CBBA800FF607F /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
+		B1A0CFA3212CBC9500FF607F /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		E3F6E1D7C728634B967D62AE /* Pods-HBMSUiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBMSUiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HBMSUiOSUITests/Pods-HBMSUiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F11493BBCA94BBE12F734FD9 /* Pods-HBMSUiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBMSUiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBMSUiOS/Pods-HBMSUiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F7A45C7E3B0D1C44A641A7AD /* Pods_HBMSUiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HBMSUiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDF912531C32E2E898BCCC7 /* Pods_HBMSUiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HBMSUiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E32AE1A764907897528EAC3 /* Pods_HBMSUiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73361D3CB25AD4CB6DF58959 /* Pods_HBMSUiOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +96,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A79E1FF77F5817CDB4F6635 /* Pods_HBMSUiOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3926577DB83DD0C4942FE493 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F11493BBCA94BBE12F734FD9 /* Pods-HBMSUiOS.debug.xcconfig */,
+				6AE3933A37A63F397BE5C5FB /* Pods-HBMSUiOS.release.xcconfig */,
+				1400279EB50597C2FDCEFC27 /* Pods-HBMSUiOSTests.debug.xcconfig */,
+				4EC01D30D98585E85C3D3854 /* Pods-HBMSUiOSTests.release.xcconfig */,
+				AF4907AF1A54E159F2400C67 /* Pods-HBMSUiOSUITests.debug.xcconfig */,
+				E3F6E1D7C728634B967D62AE /* Pods-HBMSUiOSUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B1048988212B910C00FC8F27 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				B10489AB212B910E00FC8F27 /* HBMSUiOSTests */,
 				B10489B6212B910E00FC8F27 /* HBMSUiOSUITests */,
 				B1048992212B910C00FC8F27 /* Products */,
+				3926577DB83DD0C4942FE493 /* Pods */,
+				E68778C23ECF66F6958F6EC3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +141,13 @@
 		B1048993212B910C00FC8F27 /* HBMSUiOS */ = {
 			isa = PBXGroup;
 			children = (
-				B1048994212B910D00FC8F27 /* AppDelegate.swift */,
-				B1048996212B910D00FC8F27 /* ViewController.swift */,
-				B1048998212B910D00FC8F27 /* Main.storyboard */,
-				B104899E212B910E00FC8F27 /* Assets.xcassets */,
-				B10489A0212B910E00FC8F27 /* LaunchScreen.storyboard */,
+				B1A0CF98212CAA4800FF607F /* storyboards */,
+				B1A0CF97212CAA2600FF607F /* supporting */,
+				B1A0CF96212CAA1000FF607F /* models */,
+				B1048996212B910D00FC8F27 /* WeatherListingViewController.swift */,
 				B10489A3212B910E00FC8F27 /* Info.plist */,
 				B104899B212B910D00FC8F27 /* HBMSUiOS.xcdatamodeld */,
+				B1A0CF9B212CAE7000FF607F /* ViewControllerTableViewCell.swift */,
 			);
 			path = HBMSUiOS;
 			sourceTree = "<group>";
@@ -128,6 +170,46 @@
 			path = HBMSUiOSUITests;
 			sourceTree = "<group>";
 		};
+		B1A0CF96212CAA1000FF607F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				B1A0CF99212CAA7400FF607F /* ForeCast.swift */,
+				B1A0CF9D212CBA1B00FF607F /* Main.swift */,
+				B1A0CF9F212CBB0E00FF607F /* Weather.swift */,
+				B1A0CFA1212CBBA800FF607F /* Clouds.swift */,
+				B1A0CFA3212CBC9500FF607F /* Wind.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		B1A0CF97212CAA2600FF607F /* supporting */ = {
+			isa = PBXGroup;
+			children = (
+				B1048994212B910D00FC8F27 /* AppDelegate.swift */,
+				B104899E212B910E00FC8F27 /* Assets.xcassets */,
+			);
+			path = supporting;
+			sourceTree = "<group>";
+		};
+		B1A0CF98212CAA4800FF607F /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B1048998212B910D00FC8F27 /* Main.storyboard */,
+				B10489A0212B910E00FC8F27 /* LaunchScreen.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		E68778C23ECF66F6958F6EC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF912531C32E2E898BCCC7 /* Pods_HBMSUiOS.framework */,
+				F7A45C7E3B0D1C44A641A7AD /* Pods_HBMSUiOSTests.framework */,
+				AC056B5990A8269FBB9CAB28 /* Pods_HBMSUiOSUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10489BC212B910E00FC8F27 /* Build configuration list for PBXNativeTarget "HBMSUiOS" */;
 			buildPhases = (
+				3081DCB9119FA3310E1F966F /* [CP] Check Pods Manifest.lock */,
 				B104898D212B910C00FC8F27 /* Sources */,
 				B104898E212B910C00FC8F27 /* Frameworks */,
 				B104898F212B910C00FC8F27 /* Resources */,
+				29234D61A3DE722E6DEF3F2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10489BF212B910E00FC8F27 /* Build configuration list for PBXNativeTarget "HBMSUiOSTests" */;
 			buildPhases = (
+				26F8DAEE6FADA0933915A5E4 /* [CP] Check Pods Manifest.lock */,
 				B10489A4212B910E00FC8F27 /* Sources */,
 				B10489A5212B910E00FC8F27 /* Frameworks */,
 				B10489A6212B910E00FC8F27 /* Resources */,
@@ -170,6 +255,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B10489C2212B910E00FC8F27 /* Build configuration list for PBXNativeTarget "HBMSUiOSUITests" */;
 			buildPhases = (
+				378A3A40AB7565E9B6FD9EB8 /* [CP] Check Pods Manifest.lock */,
 				B10489AF212B910E00FC8F27 /* Sources */,
 				B10489B0212B910E00FC8F27 /* Frameworks */,
 				B10489B1212B910E00FC8F27 /* Resources */,
@@ -254,14 +340,99 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		26F8DAEE6FADA0933915A5E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HBMSUiOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29234D61A3DE722E6DEF3F2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HBMSUiOS/Pods-HBMSUiOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HBMSUiOS/Pods-HBMSUiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3081DCB9119FA3310E1F966F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HBMSUiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		378A3A40AB7565E9B6FD9EB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HBMSUiOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B104898D212B910C00FC8F27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1048997212B910D00FC8F27 /* ViewController.swift in Sources */,
+				B1A0CF9E212CBA1B00FF607F /* Main.swift in Sources */,
+				B1A0CFA2212CBBA800FF607F /* Clouds.swift in Sources */,
+				B1A0CFA4212CBC9500FF607F /* Wind.swift in Sources */,
+				B1048997212B910D00FC8F27 /* WeatherListingViewController.swift in Sources */,
 				B1048995212B910D00FC8F27 /* AppDelegate.swift in Sources */,
+				B1A0CF9C212CAE7000FF607F /* ViewControllerTableViewCell.swift in Sources */,
 				B104899D212B910D00FC8F27 /* HBMSUiOS.xcdatamodeld in Sources */,
+				B1A0CF9A212CAA7400FF607F /* ForeCast.swift in Sources */,
+				B1A0CFA0212CBB0E00FF607F /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +603,7 @@
 		};
 		B10489BD212B910E00FC8F27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F11493BBCA94BBE12F734FD9 /* Pods-HBMSUiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +622,7 @@
 		};
 		B10489BE212B910E00FC8F27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AE3933A37A63F397BE5C5FB /* Pods-HBMSUiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +641,7 @@
 		};
 		B10489C0212B910E00FC8F27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1400279EB50597C2FDCEFC27 /* Pods-HBMSUiOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -489,6 +663,7 @@
 		};
 		B10489C1212B910E00FC8F27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC01D30D98585E85C3D3854 /* Pods-HBMSUiOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +685,7 @@
 		};
 		B10489C3212B910E00FC8F27 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF4907AF1A54E159F2400C67 /* Pods-HBMSUiOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +706,7 @@
 		};
 		B10489C4212B910E00FC8F27 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F6E1D7C728634B967D62AE /* Pods-HBMSUiOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
