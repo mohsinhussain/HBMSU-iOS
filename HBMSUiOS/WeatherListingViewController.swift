@@ -13,7 +13,7 @@ import AlamofireImage
 class WeatherListingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //the Web API URL
-    let URL_GET_DATA = "https://api.openweathermap.org/data/2.5/forecast?q=Dubai&units=imperial&cnt=80&APPID=1259c7528433a9050b7ec2b634430a2f"
+    let URL_GET_DATA = "https://api.openweathermap.org/data/2.5/forecast?q=Dubai&units=metric&cnt=80&APPID=1259c7528433a9050b7ec2b634430a2f"
     
     
     //a list to store heroes
@@ -36,18 +36,20 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
         
         //displaying values
         cell.titleName.text = forecast.weather?.main
-        cell.tempName.text = String(format:"%f", (forecast.main?.temp)!)
+        let x = (forecast.main?.temp)!
+        let y = Double(round(100*x)/100)
+        cell.tempName.text = String(format:"%1.2f", y)+" C"
         cell.dateName.text = forecast.dt_txt
         
         
         //displaying image
-//        Alamofire.request(hero.imageUrl!).responseImage { response in
-//            debugPrint(response)
-//            
-//            if let image = response.result.value {
-//                cell.weatherImage.image = image
-//            }
-//        }
+        Alamofire.request("http://openweathermap.org/img/w/"+(forecast.weather?.icon!)!+".png").responseImage { response in
+            debugPrint(response)
+            
+            if let image = response.result.value {
+                cell.weatherImage.image = image
+            }
+        }
         
         return cell
     }
