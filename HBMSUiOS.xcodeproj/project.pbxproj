@@ -24,6 +24,7 @@
 		B1A0CFA0212CBB0E00FF607F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CF9F212CBB0E00FF607F /* Weather.swift */; };
 		B1A0CFA2212CBBA800FF607F /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CFA1212CBBA800FF607F /* Clouds.swift */; };
 		B1A0CFA4212CBC9500FF607F /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CFA3212CBC9500FF607F /* Wind.swift */; };
+		B1A0CFA6212D48B700FF607F /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A0CFA5212D48B700FF607F /* WeatherDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		B1A0CF9F212CBB0E00FF607F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		B1A0CFA1212CBBA800FF607F /* Clouds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
 		B1A0CFA3212CBC9500FF607F /* Wind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
+		B1A0CFA5212D48B700FF607F /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 		E3F6E1D7C728634B967D62AE /* Pods-HBMSUiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBMSUiOSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HBMSUiOSUITests/Pods-HBMSUiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F11493BBCA94BBE12F734FD9 /* Pods-HBMSUiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBMSUiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBMSUiOS/Pods-HBMSUiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F7A45C7E3B0D1C44A641A7AD /* Pods_HBMSUiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HBMSUiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 				B10489A3212B910E00FC8F27 /* Info.plist */,
 				B104899B212B910D00FC8F27 /* HBMSUiOS.xcdatamodeld */,
 				B1A0CF9B212CAE7000FF607F /* ViewControllerTableViewCell.swift */,
+				B1A0CFA5212D48B700FF607F /* WeatherDetailViewController.swift */,
 			);
 			path = HBMSUiOS;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				B1048995212B910D00FC8F27 /* AppDelegate.swift in Sources */,
 				B1A0CF9C212CAE7000FF607F /* ViewControllerTableViewCell.swift in Sources */,
 				B104899D212B910D00FC8F27 /* HBMSUiOS.xcdatamodeld in Sources */,
+				B1A0CFA6212D48B700FF607F /* WeatherDetailViewController.swift in Sources */,
 				B1A0CF9A212CAA7400FF607F /* ForeCast.swift in Sources */,
 				B1A0CFA0212CBB0E00FF607F /* Weather.swift in Sources */,
 			);

@@ -19,6 +19,8 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
     //a list to store heroes
     var forecastList = [ForeCast]()
     
+    
+    
     //the method returning size of the list
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return forecastList.count
@@ -52,6 +54,60 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
         }
         
         return cell
+    }
+    
+    
+//    var index: Int? = 0
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ViewControllerTableViewCell
+        cell.tag = indexPath.row
+//        performSegue(withIdentifier: "toDetailView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        if(segue.identifier == "toDetailView") {
+            
+            if(segue.identifier=="toDetailView"){
+                let detailVC: WeatherDetailViewController? = segue.destination as? WeatherDetailViewController
+                let cell: ViewControllerTableViewCell? = sender as? ViewControllerTableViewCell
+    
+                let index = tableView.indexPathForSelectedRow?.row
+                print("Index: "+String(index!))
+                if cell != nil && detailVC != nil{
+                    detailVC!.titleText = forecastList[index!].weather?.main
+                    detailVC!.descText = forecastList[index!].weather?.description
+                    
+                    let tempValue = (forecastList[index!].main?.temp)!
+                    let tempShortValue = Double(round(100*tempValue)/100)
+                    detailVC!.tempText = String(format:"%1.2f", tempShortValue)+" C"
+                    
+                    let minTempValue = (forecastList[index!].main?.temp_min)!
+                    let minTempShortValue = Double(round(100*minTempValue)/100)
+                    detailVC!.minTempText = String(format:"%1.2f", minTempShortValue)+" C"
+                    
+                    let maxTempValue = (forecastList[index!].main?.temp_max)!
+                    let maxTempShortValue = Double(round(100*maxTempValue)/100)
+                    detailVC!.maxTempText = String(format:"%1.2f", maxTempShortValue)+" C"
+                    
+                    detailVC!.airText = String(format:"%1.2f", (forecastList[index!].main?.pressure)!)
+                    let humid = String((forecastList[index!].main?.humidity)!)
+                    detailVC!.humidityText = humid
+                    
+                    detailVC!.cloudsText = String((forecastList[index!].clouds?.all)!)+" %"
+                    
+                    let windValue = (forecastList[index!].wind?.speed)!
+                    let windShortValue = Double(round(100*windValue)/100)
+                    detailVC!.windText = String(format:"%1.2f", windShortValue)+" Kms"
+                    
+                    detailVC!.iconText = forecastList[index!].weather?.icon
+                }
+                
+            }
+            
+        }
+        
     }
     
     @IBOutlet weak var tableView: UITableView!
@@ -90,7 +146,9 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
                                          main: (((list[i] as AnyObject).value(forKey: "weather") as? [AnyObject])?.first as! NSObject).value(forKey: "main") as? String,
                                          description: (((list[i] as AnyObject).value(forKey: "weather") as? [AnyObject])?.first as! NSObject).value(forKey: "description") as? String,
                                          icon: (((list[i] as AnyObject).value(forKey: "weather") as? [AnyObject])?.first as! NSObject).value(forKey: "icon") as? String),
-                        clouds: nil, wind: nil,
+                        clouds: Clouds(all: ((list[i] as AnyObject).value(forKey: "clouds") as? AnyObject)?.value(forKey: "all") as? Int),
+                        wind: Wind(speed: ((list[i] as AnyObject).value(forKey: "wind") as? AnyObject)?.value(forKey: "speed") as? Double,
+                                   deg: nil),
                         dt_txt: (list[i] as AnyObject).value(forKey: "dt_txt") as? String,
                         humidity: (list[i] as AnyObject).value(forKey: "humidity") as? Int
                     ))
@@ -99,7 +157,8 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
                 
                 //displaying data in tableview
                 self.tableView.reloadData()
-                
+                self.tableView.allowsSelection = true
+                self.tableView.isUserInteractionEnabled = true
             }
             
         }
@@ -108,8 +167,19 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
         
         self.tableView.reloadData()
         
+        
     }
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier=="toDetailView"){
+//            let detailVC: WeatherDetailViewController? = segue.destination as? WeatherDetailViewController
+//            let cell: ViewControllerTableViewCell? = sender as? ViewControllerTableViewCell
+//
+//            if cell != nil && detailVC != nil{
+//                detailVC!.titleLabel.text = cell!.titleName!.text
+//            }
+//        }
+//    }
 
 
 }
