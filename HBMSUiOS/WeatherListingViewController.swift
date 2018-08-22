@@ -9,8 +9,9 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import UserNotifications
 
-class WeatherListingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class WeatherListingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UNUserNotificationCenterDelegate {
     
     //the Web API URL
     let URL_GET_DATA = "https://api.openweathermap.org/data/2.5/forecast?q=Dubai&units=metric&cnt=80&APPID=1259c7528433a9050b7ec2b634430a2f"
@@ -188,6 +189,34 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
             }
             
             
+            
+            
+            //requesting for authorization
+            UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in
+                
+            })
+            
+            //creating the notification content
+            let content = UNMutableNotificationContent()
+            
+            //adding title, subtitle, body and badge
+            content.title = "Weather Alert!"
+            content.subtitle = "HBMSU"
+            content.body = "Temprature is changing in your area"
+            content.badge = 1
+            
+            //getting the notification trigger
+            //it will be called after 5 seconds
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 15, repeats: false)
+            
+            //getting the notification request
+            let request = UNNotificationRequest(identifier: "SimplifiedIOSNotification", content: content, trigger: trigger)
+            
+            UNUserNotificationCenter.current().delegate = self
+            
+            //adding the notification to notification center
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+         
         }
         
         
@@ -196,17 +225,12 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
         
         
     }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier=="toDetailView"){
-//            let detailVC: WeatherDetailViewController? = segue.destination as? WeatherDetailViewController
-//            let cell: ViewControllerTableViewCell? = sender as? ViewControllerTableViewCell
-//
-//            if cell != nil && detailVC != nil{
-//                detailVC!.titleLabel.text = cell!.titleName!.text
-//            }
-//        }
-//    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        //displaying the ios local notification when app is in foreground
+        completionHandler([.alert, .badge, .sound])
+    }
 
 
 }
