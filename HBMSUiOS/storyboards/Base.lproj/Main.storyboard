@@ -96,7 +96,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xtc-0w-jIS"/>
+                    <navigationItem key="navigationItem" id="xtc-0w-jIS">
+                        <barButtonItem key="rightBarButtonItem" title="Change Unit" id="vaC-EG-QRS">
+                            <connections>
+                                <action selector="OnChangeUnit" destination="BYZ-38-t0r" id="gCa-FS-3zu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="3ee-hl-fPD" id="Kqa-G9-YI4"/>
                     </connections>

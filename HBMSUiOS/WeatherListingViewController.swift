@@ -40,7 +40,7 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
         cell.titleName.text = forecast.weather?.main
         let x = (forecast.main?.temp)!
         let y = Double(round(100*x)/100)
-        cell.tempName.text = String(format:"%1.2f", y)+" C"
+        cell.tempName.text = convertUnit(temp: y)
         cell.dateName.text = forecast.dt_txt
         
         
@@ -56,6 +56,18 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
+    func convertUnit(temp:Double) -> String{
+        
+        if(defaults.object(forKey: "isImperial") as? Bool)!{
+            let fahrenheit = String(format: "%1.2f", (temp * 9.0) / 5.0 + 32.0)+" F"
+            return fahrenheit
+        }
+        else{
+            let celcius = String(format: "%1.2f", temp)+" C"
+            return celcius
+        }
+        
+    }
     
 //    var index: Int? = 0
     
@@ -81,15 +93,15 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
                     
                     let tempValue = (forecastList[index!].main?.temp)!
                     let tempShortValue = Double(round(100*tempValue)/100)
-                    detailVC!.tempText = String(format:"%1.2f", tempShortValue)+" C"
+                    detailVC!.tempText = convertUnit(temp: tempShortValue)
                     
                     let minTempValue = (forecastList[index!].main?.temp_min)!
                     let minTempShortValue = Double(round(100*minTempValue)/100)
-                    detailVC!.minTempText = String(format:"%1.2f", minTempShortValue)+" C"
+                    detailVC!.minTempText = convertUnit(temp: minTempValue)
                     
                     let maxTempValue = (forecastList[index!].main?.temp_max)!
                     let maxTempShortValue = Double(round(100*maxTempValue)/100)
-                    detailVC!.maxTempText = String(format:"%1.2f", maxTempShortValue)+" C"
+                    detailVC!.maxTempText = convertUnit(temp: maxTempValue)
                     
                     detailVC!.airText = String(format:"%1.2f", (forecastList[index!].main?.pressure)!)
                     let humid = String((forecastList[index!].main?.humidity)!)
@@ -109,8 +121,17 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
         }
         
     }
-    
+    let defaults = UserDefaults.standard
     @IBOutlet weak var tableView: UITableView!
+    @IBAction func OnChangeUnit(){
+        if((defaults.object(forKey: "isImperial")) as? Bool)!{
+            defaults.set(false, forKey: "isImperial")
+        }
+        else{
+            defaults.set(true, forKey: "isImperial")
+        }
+        self.tableView.reloadData()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,6 +181,12 @@ class WeatherListingViewController: UIViewController, UITableViewDataSource, UIT
                 self.tableView.allowsSelection = true
                 self.tableView.isUserInteractionEnabled = true
             }
+            
+            
+            if(self.defaults.object(forKey: "isImperial") == nil){
+                self.defaults.set(false, forKey: "isImperial")
+            }
+            
             
         }
         

@@ -1,0 +1,6 @@
+framework module Pods_HBMSUiOS {
+  umbrella header "Pods-HBMSUiOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
